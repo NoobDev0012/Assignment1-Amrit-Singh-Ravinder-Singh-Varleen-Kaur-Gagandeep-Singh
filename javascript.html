@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="javascript.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+	<link rel="shortcut icon" href="../terminal.svg" type="image/x-icon">
+	<title>JavaScript</title>
+</head>
+
+<body>
+
+	<section class="nav-header">
+		<div class="logo">
+			<a class="a-reset" href="../index.html"><span class="logo-text">web development</span></a>
+		</div>
+		<div class="nav-link-container">
+			<a href="../index.html" class="nav-link a-reset">home</a>
+			<a href="./javascript.html" class="nav-link a-reset">javascript</a>
+			<a href="" class="nav-link a-reset">JQuery</a>
+			<a href="" class="nav-link a-reset">ajax</a>
+			<a href="" class="nav-link a-reset">contact</a>
+		</div>
+	</section>
+
+	<section class="main-content">
+		<div class="overview">
+			<div class="stick-container">
+				<span class="heading-400 overview-heading">Quick Links</span>
+				<div class="overview-link-container">
+					<a class="a-reset overview-link" href="#gettingStarted">Getting Started</a>
+
+					<a class="a-reset overview-link" href="#coreLang">Know your language</a>
+
+					<a class="a-reset overview-link" href="#variables">Variables</a>
+
+					<a class="a-reset overview-link" href="#operators">Operators</a>
+
+					<a class="a-reset overview-link" href="#conditionalStmt">Conditional Statements</a>
+
+					<a class="a-reset overview-link" href="#func">Functions</a>
+
+					<a class="a-reset overview-link" href="#obj">Objects</a>
+
+					<a class="a-reset overview-link" href="#arrays">Arrays</a>
+
+					<a class="a-reset overview-link" href="#loops">Loops</a>
+
+					<a class="a-reset overview-link" href="#domEdit">Messing with DOM</a>
+
+
+
+
+
+
+				</div>
+			</div>
+			<div></div>
+			<!-- <span class="heading-400 overview-heading">Overveiw</span>
+			<a class="a-reset" href="#"><span>Getting Started</span></a>
+			<a class="a-reset" href="#"><span>Getting Started</span></a> -->
+		</div>
+		<section class="main">
+
+			<span id="gettingStarted" class="heading-700">getting started with javascript</span>
+			<!-- can add js logo here -->
+
+			<p class="body">JavaScript is a versatile programming language primarily used for building interactive and
+				dynamic websites. Its purpose is to enhance the functionality of web pages by providing a means to
+				manipulate the <strong>Document Object Model (DOM)</strong>, allowing developers to dynamically update
+				and modify the content and style of web pages without requiring a page reload. Over time, JavaScript has
+				evolved into a powerful language that is not only essential for front-end web development but also
+				widely used on the server-side (Node.js) and for mobile app development.
+			</p>
+			<p class="body">
+				It is an <strong>interpreted</strong> language and not compiled. JavaScript is relatively compact, yet
+				very flexible. Developers have written a variety of tools on top of the core JavaScript language,
+				unlocking a vast amount of functionality with minimum effort. These include:
+			</p>
+
+			<ul class="body list">
+				<li><strong>Browser Application Programming Interfaces (APIs) </strong> built into web browsers,
+					providing functionality such as dynamically creating HTML and setting CSS styles; collecting and
+					manipulating a video stream from a user's webcam, or generating 3D graphics and audio samples.</li>
+				<li>Third-party APIs that allow developers to incorporate functionality in sites from other content
+					providers, such as Twitter or Facebook.</li>
+				<li>Third-party frameworks and libraries that you can apply to HTML to accelerate the work of building
+					sites and applications.</li>
+			</ul>
+
+			<span id="coreLang" class="heading-700">KYL - Know Your Language (Variables and Data Types in
+				JavaScript)</span>
+
+			<p class="body">In order to know more about the language it's great to take a look at the core features of
+				the language.
+			</p>
+
+			<p id="variables" class="heading-400">Variables</p>
+
+			<p class="body">These are the containers in which the users can store different types of data. We can create
+				one by using the <code>let</code> keyword.</p>
+
+			<pre><code>let newVariable;</code></pre>
+
+			<p class="body">Notice the <code>;</code>? It is there to specify that a line has ended.</p>
+
+			<p class="body">Javascript is case-sensitive. That means <code>newvariable</code> is not same as
+				<code>newVariable</code>. <br> Once a variable is declared you can assign some value to it.
+			</p>
+
+			<pre><code>newVariable = "javascript";</code></pre>
+
+			<p class="body">Variables can also be declared by <code>var</code> keyword.</p>
+
+			<pre><code>var TimeOftheDay = 'morning';
+let orange = 10;</code></pre>
+
+			<p class="body">There are many types of data that we can store in variables. Some of the basic data types
+				are:</p>
+
+			<pre><code>let greeting = "Hello"; 	// string 
+let age = 25;			// integer
+let isAdult = true;		// boolean
+let person = null;		// null
+let job; 			// undefined</code></pre>
+
+			<p id="operators" class="heading-400">operators</p>
+			<p class="body">Operators are the symbols that represent particular operations on different values and
+				variables. These operators make the language capable of performing certain actions such as arithmetic
+				calculations, assignment, comparison, and logical operations. </p>
+
+			<pre><code>5 + 8;		//Addition
+10 - 3;		//Subtraction
+10 * 3;		//Multiplication
+100 / 10; 	//Division 
+let num = 10;	//Assignment
+num === 5; 	//Strict equality
+!(true); 	//NOT
+num !== "red";  //not-equal </code></pre>
+
+			<p class="body">These operators helps in evaluating and checking different conditions when they are paired
+				with <code>conditional blocks</code></p>
+
+			<p id="conditionalStmt" class="heading-400">Conditional Statements</p>
+			<p class="body">Conditional statements allow you to make decisions in your code. These code structures are
+				used to check whether a statement is true or false. The code then behave accordingly.</p>
+
+			<pre><code>let age = 18;
+
+// if-else statement
+if (age >= 18) {
+console.log("You are an adult.");
+} else {
+console.log("You are a minor.");
+}</code></pre>
+
+			<p class="body">Here the code checks the <code>if()</code> condition and compares <code>age</code> variable
+				with provided integer. If the result is true the first code block runs else the second code block is
+				executed. One can add multiple checks by chaining the <code>if...else</code> conditional.</p>
+
+			<p id="func" class="heading-400">Functions</p>
+			<p class="body">Functions can be defined as reusable code blocks. It's possible to define a body of code as
+				a function that executes when you call the function name in your code. Javascript allow us to store a
+				set of commands/operations in a function so that we don't have to rewrite the code everytime.</p>
+
+			<pre><code>// Function declaration
+function greet(name) {
+	console.log("Hello, " + name + "!");
+}
+
+// Function invocation
+greet("Alice");
+</code></pre>
+
+			<p class="body">In the above code the keyword <code>function</code> is used to declare a function named
+				<code>greet()</code> which requires a name. This is likely to be a <code>string</code> data type. The
+				code inside the <code>{}</code> is what is executed when a function is called.
+			</p>
+
+			<p class="body">At the time of calling a function to run. we write the name of the declared function
+				(case-sensitive) followed by the data required in <code>()</code>. This will invoke the function and run
+				the code in it.</p>
+
+			<p class="body">In this example notice <code>console.log()</code>? It is also an in-built function which
+				takes in a data type and logs it to the web-browser's console. This is mostly used for debugging the
+				code.</p>
+
+			<pre><code>let greet = function() { console.log("hello") };
+
+greet();</code></pre>
+
+			<p class="body">We can also assign annonymous functions to a variable and call them as we would normally do.
+			</p>
+
+			<p id="obj" class="heading-400">objects</p>
+			<p class="body">Objects are collections of data types. These consist of key-value pairs in
+				<code>key:value</code> order. Where key is a string (or symbol) and value can be any data type including
+				other objects.
+			</p>
+
+			<pre><code>let person = {
+  name: "John",
+  age: 30,
+  isAdult: true,
+  sayHello: function() {
+    console.log("Hello!");
+  }
+};</code></pre>
+
+			<p class="body">It can be observed that the object <code>person</code> has multiple properties such as name
+				and age. It also contains a <code>sayHello</code> function that can be called as a method of this
+				object.</p>
+
+			<pre><code>person.name; 	//OUTPUT: 'John'
+person.name = 'Stan';	//updating object property
+person['age'] 	//OUTPUT: 30
+</code></pre>
+
+			<p class="body">The object's properties can be accessed and used by the above shown methods. It is also
+				possible to update the properties of the object by using assignment operator <code>=</code>. </p>
+
+			<pre><code>person.sayHello()</code></pre>
+
+			<p class="body">With objects we can invoke their methods by using the above syntax. Where the
+				<code>person</code> is the variable name assigned to the object, <code>sayHello()</code> is the method
+				declared in the object. These are joined by a dot(.)
+			</p>
+
+			<p id="arrays" class="heading-400">Arrays</p>
+			<p class="body">Arrays are type of objects. Instead of using key-value pair, array uses numerical index
+				numbers to access it's elements. It can be considered as a list.</p>
+
+			<pre><code>let fruits = ["apple", "banana", "orange"];</code></pre>
+
+			<p class="body">The above syntax is used to declare an array. Here the data (strings) is enclosed in
+				<code>[]</code> and separated by <code>,</code>.
+			</p>
+
+			<pre><code>fruit[0]; 	//OUTPUT: "apple" 
+fruit[1]; 	//OUTPUT: "orange"</code></pre>
+
+
+			<p class="body">In order to access the elements of an array, integers starting from 0 are used. Where 0
+				depicts the first element in the array.</p>
+
+			<p class="body">Similar to object. Array's elements can also be updated using the following syntax :</p>
+
+			<pre><code>fruit[0] = "mango" 	// now fruit = ["mango","banana","orange"] </code></pre>
+
+
+			<p id="loops" class="heading-400">Loops</p>
+			<p class="body">In JavaScript, loops are used to execute a block of code repeatedly. There are several types
+				of loops, each serving different purposes. Here are three commonly used loop structures:</p>
+
+			<p class="heading-400">For Loop</p>
+			<p class="body">This loop is usually used when you know the number of iterations beforehand. It consists of
+				an initialization statement, a condition, and an iteration statement.</p>
+
+			<pre><code>for (let i = 0; i < 5; i++) {
+  console.log(i);
+}</code></pre>
+
+			<p class="body">In this example, the loop initializes <code>i</code> at 0, this initalised variable acts as
+				a counter. This variable can be declared in the loop declaration or outside the loop. The loop executes
+				the block of code as long as <code>i</code> is less than 5, and increments <code>i</code> by 1 after
+				each iteration.</p>
+
+			<p class="heading-400">While Loop</p>
+			<p class="body">The <code>while</code> loop is used when the number of iterations is not known beforehand.
+				It repeats a block of code as long as a specified condition is true.</p>
+
+			<pre><code>let i = 0;
+while (i < 5) {
+  console.log(i);
+  i++;
+}</code></pre>
+
+			<p class="body">This example achieves the same result as the <code>for</code> loop but uses a
+				<code>while</code> loop. The block of code is executed as long as the condition <code>i < 5</code> is
+				true.
+			</p>
+
+			<p class="heading-400">For...Of Loop</p>
+			<p class="body">This specific loop is used for iterating over iterable objects, such as arrays, strings, or
+				other iterable structures.</p>
+
+			<pre><code>let fruits = ['apple', 'banana', 'orange'];
+
+for (let fruit of fruits) {
+  console.log(fruit);
+}</code></pre>
+
+			<p class="body">This loop goes over each element in the <code>fruits</code> array in sequence. One element
+				of the array is accessed and then stored in the variable <code>fruit</code> declared in the loop
+				initialisation, then after the loop runs the code it moves to the next element in the sequence.</p>
+
+			<span id="domEdit" class="heading-700">Messing with HTML (DOM Manipulation)</span>
+
+			<p class="heading-400">element selection</p>
+			<p class="body">In order to create dynamic content in a webpage, the elements of the HTML has to be
+				accessed. DOM (Document Object Model) is a programming interface for web documents. It represents the
+				structure of a document as a tree of objects, where each object corresponds to a part of the document,
+				such as elements, attributes, and text content. </p>
+
+			<p class="body">The DOM is used when we access the <code>document</code> object in Javascript. This is the
+				top level object that holds all the elements and their properties.</p>
+
+			<p class="body">If we have to change the text inside an HTML <code>&ltp&gt</code> tag, we will have to make
+				an instance of the tag in Javascript so that we can access it's properties.</p>
+
+			<pre><code>let textTag = document.querySelector("p");</code></pre>
+
+			<p class="body">we have successfully created an instance of the paragraph tag in Javascript and now we can
+				use the object's property like <code>innerHTML</code>to change the text in it.</p>
+
+			<pre><code>textTag.innerHTML = "this is updated !"; </code></pre>
+
+			<p class="body">There are many other ways in which we can access different elements of HTML file like: </p>
+
+			<ul class="body list">
+				<li>
+					<code>getElementsByTagName</code>:
+					<p>As the name suggest, this DOM selector gets all the elements that matches the given tag.
+						<code>document.getElementsByTagName("div");</code>
+						returns a list that contains all the <code>div</code>.
+					</p>
+				</li>
+
+				<li>
+					<code>getElementsByClassName</code>:
+					<p>This gets all the elements with same class as passed as an argument to the method.
+						<code>document.getElementsByClassName('heading')</code>
+					</p>
+				</li>
+
+				<li>
+					<code>getElementById</code>:
+					<p>In this, the elements are selected based on the Ids. This may look similar to the tagname and
+						Class name but this sector only returns the first matched element while ignoring the remaining.
+						<code>document.getElementById('item')</code>
+					</p>
+				</li>
+
+				<li>
+					<code>querySelectorAll()</code>:
+					<p>This method returns all the elements that matches the specified CSS selector in the document.
+						<code>document.querySelectorAll('ul>li::after')</code>
+					</p>
+				</li>
+			</ul>
+
+
+		</section>
+	</section>
+
+</body>
+
+</html>

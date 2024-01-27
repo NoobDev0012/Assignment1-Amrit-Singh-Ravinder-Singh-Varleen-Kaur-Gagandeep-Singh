@@ -1,0 +1,214 @@
+:root {
+	--logo-ff : 'Climate Crisis' , sans-serif;
+	--primary-ff : 'Roboto' , sans-serif;
+
+	--bg-color : #1A1A1A;
+	--dark-bg-color : #050505;
+	--body-text-color: #808080;
+
+	--heading-color: #eee;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: hsla(0, 0%, 21%, 0.8);
+}
+
+/* basic resets */
+
+* {
+
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--bg-color);
+}
+
+.a-reset {
+	text-decoration: none;
+	color: inherit;
+}
+
+.heading-400 {
+	font-family: var(--primary-ff);
+	font-size: 1.7rem;
+	font-weight: 600;
+
+	text-transform: capitalize;
+
+}
+
+.nav-header {
+
+	position: fixed	;
+	top: 20px;
+
+	width: 100%;
+
+	border: 1px solid #736ce0;
+	border-width: 3px 0 3px 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	padding: 5px 15px;
+
+	background: rgba(42, 40, 85, 0.3);
+	backdrop-filter: blur(3px) invert(0);
+
+	filter: saturate(2);
+	/* purple */
+	color: 	#736ce0; 
+
+/*	mix-blend-mode: difference;*/
+
+}
+
+.nav-link-container {
+	margin-right: 10px;
+
+	font-size: 1.2rem;
+	font-family: 'Roboto Condensed', sans-serif;
+
+	display: flex;
+	justify-content: space-evenly;
+
+	margin: 10px 5px;
+}
+
+.nav-link {
+	text-transform: capitalize;
+
+	padding: 5px 15px;
+
+	margin-right: 5px;
+
+	border-radius: 10px;
+	transition: all ease 400ms;
+}
+
+.nav-link:hover {
+	background: rgba(9, 8, 17, 0.5);
+}
+
+.logo {
+
+	font-family: var(--logo-ff);
+	font-size: 1.5rem;
+
+	margin-right: 5vw ;
+
+	display: flex;
+
+}
+
+.main-container {
+	margin: 0 2.5vw;
+	margin-top: 25vh;
+}
+
+.header {
+	padding: 20px;
+	font-family: var(--primary-ff);
+}
+
+.heading-container {
+	display: flex; 
+	flex-direction: column; 
+	width: fit-content;
+}
+
+.sub-heading {
+	display: block;
+
+	font-size: 2rem;
+	font-weight: 600 ;
+
+	margin-bottom: 10px;
+
+	text-transform: capitalize;
+	color: #4a4a4a;
+}
+
+.decor {
+
+	aspect-ratio: 16/9;
+	width: auto;
+	height: 10vh;
+	background-image: url(feh_006969_000001_83e7240ca2c4a6157db2788baf0aa149.jpg);
+	background-position: center;
+
+	border: 2px solid #fff;
+
+	margin-left: 3rem;
+	margin-top: 1vh;
+
+	border-radius: 15px;
+}
+
+.heading-text {
+
+	font-family: var(--primary-ff);
+	font-weight: 900;
+	font-size: 5rem;
+
+	color: #fff;
+
+	margin-left: 3rem;
+}
+
+.body {
+
+	border-radius: 15px;
+	border: 4px solid var(--body-text-color) ;
+
+	margin: 20vh 1rem 10vh;
+	padding: 20px;
+
+	background: inherit;
+
+	font-family: var(--primary-ff);
+	font-size: 1.3rem;
+
+	line-height: 1.5;
+
+	color: var(--body-text-color);
+}
+
+.body > p:not(.body p:first-child) {
+	margin-top: 20px;
+}
+
+.body .heading-400 {
+	color: var(--heading-color);
+}
+
+.body code {
+	background: var(--dark-bg-color) ;
+	font-size: 1.2rem;
+	padding: 0 5px;
+
+	border-radius: 5px;
+}
+
+.footer {
+
+	padding: 10px;
+
+	font-family: var(--primary-ff);
+
+	background: var(--dark-bg-color);
+	color: #808080;
+}
+
+.regards {
+	display: flex;
+	align-items: center;
+}
