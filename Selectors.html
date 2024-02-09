@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="Selector.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+	<link rel="shortcut icon" href="../terminal.svg" type="image/x-icon">
+	<title>JavaScript</title>
+</head>
+
+<body>
+
+	<section class="nav-header">
+		<div class="logo">
+			<a class="a-reset" href="../index.html"><span class="logo-text">web development</span></a>
+		</div>
+		<div class="nav-link-container">
+			<a href="#" class="nav-link a-reset">home</a>
+			<a href="javascript.html" class="nav-link a-reset">JavaScript</a>
+			<a href="Selectors.html" class="nav-link a-reset">Selectors</a>
+			<a href="" class="nav-link a-reset">JQuery</a>
+			<a href="" class="nav-link a-reset">ajax</a>
+			<a href="" class="nav-link a-reset">contact</a>
+		</div>
+	</section>
+
+	<section class="main-content">
+		<div class="overview">
+			<div class="stick-container">
+				<span class="heading-400 overview-heading">Quick Links</span>
+				<div class="overview-link-container">
+					<a class="a-reset overview-link" href="#getingStarted">Getting Started</a>
+
+					<a class="a-reset overview-link" href="#tagSelector">Tag Selector</a>
+
+					<a class="a-reset overview-link" href="#idSelector">ID Selector</a>
+
+					<a class="a-reset overview-link" href="#attributeSelector">Attribute Selector</a>
+
+					<a class="a-reset overview-link" href="#attribute-value-selector">Attribute Value Selector</a>
+
+				</div>
+			</div>
+			<div></div>
+			<!-- <span class="heading-400 overview-heading">Overveiw</span>
+			<a class="a-reset" href="#"><span>Getting Started</span></a>
+			<a class="a-reset" href="#"><span>Getting Started</span></a> -->
+		</div>
+		<section class="main">
+
+			<span id="getingStarted" class="heading-700">getting started with the Selectors</span>
+			<!-- can add js logo here -->
+
+			<p class="body">In JavaScript, <strong>"selectors"</strong> typically refer to methods that allow you 
+                to select and manipulate elements in the <strong>Document Object Model (DOM)</strong>.The DOM represents the structure
+                of an HTML document, and JavaScript provides several methods for selecting elements within this structure.
+			</p>
+
+			<p id="tagSelector" class="heading-400">Tag Selector</p>
+			<p class="body">Selects all elements with a specific tag name.A "tag selector" in the context of CSS refers to selecting 
+                HTML elements based on their tag names. It allows you to style or target specific elements on a webpage by referencing their HTML tag.
+                For example, if you want to apply a style to all '<p>' (paragraph) elements on a webpage, you would use the tag selector for the '<p>' tag. </p>
+
+			<pre><code>var elements = document.getElementsByTagName("tagName");
+                /* CSS */
+p {
+    color: blue;
+}
+             
+            </code></pre>
+
+			<p class="body">This selector is good if you want to style multiple elements of same tag.
+            </p>
+			
+			<p id="idSelector" class="heading-400">ID Selector</p>
+			<p class="body">Selects an element with a specific ID attribute.An "ID selector" in CSS is used to target a specific 
+                HTML element based on its unique identifier (ID).In HTML, the ID attribute provides a way to uniquely identify an
+                element within a document. The ID selector in CSS allows you to apply styles or target
+                specific behavior to that particular element</p>
+
+			<pre><code>var element = document.getElementById("elementId"); 
+                This is how it styled in /* CSS */
+              #unique-id {
+                background-color: yellow;
+}
+
+            </code></pre>
+
+
+			<p id="attributeSelector" class="heading-400">Attribute Selector</p>
+			<p class="body">In JavaScript, there is no direct method called getElementByAttribute. However, you can achieve similar
+                 functionality by combining other methods such as querySelectorAll with attribute selectors.
+			</p>
+
+			<pre><code>var elements = document.querySelectorAll('[attributeName="value"]');
+            </code></pre>
+
+			<p id="attribute-value-selector" class="heading-400">Attribute Value Selector</p>
+			<p class="body">Attribute selectors in CSS allow you to target elements based on the presence of specific attributes and their values.
+                 They provide a powerful way to style or manipulate elements in your HTML document.</p>    
+			<pre><code>var elements = document.querySelectorAll('[attributeName="value"]');</code></pre>
+
+                <p class="body">If you want to perform actions on each element matching the attribute criteria, you can loop through the
+                 NodeList obtained from querySelectorAll</p>
+            <pre><code>var elements = document.querySelectorAll('[data-type="example"]');
+                elements.forEach(function(element) {
+                    // Do something with each element
+                });
+                </code></pre>
+
+
+			
+
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+:root {
+	--logo-ff : 'Climate Crisis' , sans-serif;
+	--primary-ff : 'Roboto' , sans-serif;
+
+	--bg-color : #1A1A1A;
+	--dark-bg-color : #050505;
+	--body-text-color: #999;
+
+	--heading-color: #eee;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: hsla(0, 0%, 21%, 0.8);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* basic resets */
+
+* {
+
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+
+	font-family: var(--primary-ff);
+
+	background: var(--bg-color);
+	color: #fff;
+}
+
+.a-reset {
+	text-decoration: none;
+	color: inherit;
+}
+
+.heading-400 {
+	font-family: var(--primary-ff);
+	font-size: 1.7rem;
+	font-weight: 500;
+
+	text-transform: capitalize;
+
+	color: var(--heading-color);
+
+	scroll-margin: 100px;
+}
+
+.heading-500 {
+	font-family: var(--primary-ff);
+	font-size: 2rem;
+	font-weight: 600;
+
+	text-transform: capitalize;
+
+	color: var(--heading-color);
+}
+
+.heading-700 {
+	font-family: var(--primary-ff);
+	font-size: 2.5rem;
+	font-weight: 700;
+
+	text-transform: capitalize;
+
+	color: var(--heading-color);
+
+	scroll-margin: 100px;
+}
+
+.body {
+	border-radius: 15px;
+	border: 4px solid var(--body-text-color) ;
+
+	margin: 20vh 1rem 10vh;
+	padding: 20px;
+
+	background: inherit;
+
+	font-family: var(--primary-ff);
+	font-size: 1.3rem;
+
+	line-height: 1.5;
+
+	color: var(--body-text-color);
+}
+
+.body code {
+	background: var(--dark-bg-color) ;
+	font-size: 1.2rem;
+	padding: 0 5px;
+
+	border-radius: 5px;
+}
+
+pre code.hljs {
+
+	background: var(--dark-bg-color);
+
+	border-radius: 5px;
+	margin: 20px 0;
+	font-size: 1rem;
+}
+
+
+.nav-header {
+
+	position: fixed;
+
+	top: 0px;
+
+	width: 100%;
+
+	border: 1px solid #736ce0;
+	border-width: 3px 0 3px 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	padding: 5px 15px;
+
+	background: rgba(42, 40, 85, 0.3);
+	backdrop-filter: blur(6px);
+
+	filter: saturate(2);
+
+	/* purple */
+	color: 	#736ce0; 
+
+/*	mix-blend-mode: difference;*/
+
+}
+
+.nav-link-container {
+	margin-right: 10px;
+
+	font-size: 1.2rem;
+	font-family: 'Roboto Condensed', sans-serif;
+
+	display: flex;
+	justify-content: space-evenly;
+
+	margin: 10px 5px;
+}
+
+.nav-link {
+	text-transform: capitalize;
+
+	padding: 5px 15px;
+
+	margin-right: 5px;
+
+	border-radius: 10px;
+	transition: all ease 400ms;
+}
+
+.nav-link:hover {
+	background: rgba(9, 8, 17, 0.5);
+}
+
+
+.logo {
+
+	font-family: var(--logo-ff);
+	font-size: 1.5rem;
+
+	margin-right: 5vw ;
+
+	display: flex;
+
+}
+
+.main-content {
+	display: grid;
+
+	grid-template-columns: 1fr 3fr 1fr ;
+
+	margin: 0 1rem;
+	margin-top: 20vh;
+}
+
+.main-content .main {
+	padding: 30px;
+	line-height: 1.5;
+
+}
+
+.stick-container {
+	position: sticky;
+	top: 20vh;
+}
+
+.overview-link-container {
+	display: flex;
+	flex-direction: column;
+	padding: 15px;
+}
+
+.overview-link {
+	font-size: 1.2rem;
+
+	padding: 10px 0 0;
+	text-transform: capitalize;
+
+	border-bottom: 1px dashed transparent;
+	width: fit-content;
+
+	transition: all ease 300ms;
+
+}
+
+.overview-link:hover {
+	border-color: inherit;
+}
+
+
+.overview-heading {
+	font-size: 1.5rem;
+	padding: 5px 10px;
+
+	display: inline-block;
+	width: 100%;
+
+	border-radius: 5px;
+	background: #080808;
+}
+
+.list > li {
+	margin: 20px 0;
+	margin-left: 3rem;
+}
