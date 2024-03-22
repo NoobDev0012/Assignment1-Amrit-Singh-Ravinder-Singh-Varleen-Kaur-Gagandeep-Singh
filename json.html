@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="json.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <link rel="shortcut icon" href="../terminal.svg" type="image/x-icon">
+    <title>JSON Concepts</title>
+</head>
+
+<body>
+
+    <section class="nav-header">
+        <div class="logo">
+            <a class="a-reset" href="index.html"><span class="logo-text">Web Development</span></a>
+        </div>
+        <div class="nav-link-container">
+            <a href="index.html" class="nav-link a-reset">home</a>
+			<a href="javascript.html" class="nav-link a-reset">JavaScript</a>
+			<a href="Selectors.html" class="nav-link a-reset">Selectors</a>
+			<a href="json.html" class="nav-link a-reset">JSON</a>
+			<a href="" class="nav-link a-reset">JQuery</a>
+			<a href="" class="nav-link a-reset">ajax</a>
+			<a href="" class="nav-link a-reset">contact</a>
+        </div>
+    </section>
+
+    <section class="main-content">
+        <div class="overview">
+            <div class="stick-container">
+                <span class="heading-400 overview-heading">Quick Links</span>
+                <div class="overview-link-container">
+                    <a class="a-reset overview-link" href="#introduction">Introduction</a>
+                    <a class="a-reset overview-link" href="#readingJSON">Reading JSON Data</a>
+                    <a class="a-reset overview-link" href="#fetchingJSON">Fetching JSON Data</a>
+                    <a class="a-reset overview-link" href="#manipulatingJSON">Manipulating JSON Data</a>
+                    <a class="a-reset overview-link" href="#modifyingJSON">Modifying JSON Data</a>
+                    <a class="a-reset overview-link" href="#validatingJSON">Validating JSON Data</a>
+                    <a class="a-reset overview-link" href="#ObjectArrayJSON">Complex Object Array JSON</a>
+                </div>
+            </div>
+        </div>
+        <section class="main">
+            <span id="introduction" class="heading-700">Introduction to JSON</span>
+            <div class="body">
+                <p>JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to
+                    read and write, and easy for machines to parse and generate. It is based on a subset of the
+                    JavaScript programming language.</p><br>
+
+                <p>JSON is commonly used for transmitting data between a web server and a web application, as an
+                    alternative to XML (eXtensible Markup Language). It has become the de facto standard for data
+                    interchange on the web due to its simplicity and flexibility.</p><br>
+
+                <p>JSON data is represented as key-value pairs, where each key is a string and each value can be a
+                    string, number, boolean, array, or another JSON object. This hierarchical structure allows for
+                    complex data to be easily organized and accessed.</p><br>
+
+                <p>JSON files typically have the extension `.json` and are often used to store configuration settings,
+                    API responses, and structured data for web applications.</p><br>
+
+                <p>In JavaScript, JSON data can be parsed into JavaScript objects using the `JSON.parse()` method, and
+                    JavaScript objects can be converted into JSON strings using the `JSON.stringify()` method.</p>
+            </div>
+
+            <span id="readingJSON" class="heading-700">Reading JSON Data</span>
+            <div class="body">
+                <p>Reading JSON data in JavaScript involves converting a JSON string into a JavaScript object. This
+                    process allows you to access and manipulate the data within your JavaScript code.</p><br>
+
+                <p>Let's consider an example where we have a JSON string representing a person's information:</p><br>
+
+                <pre><code>{
+    "name": "John",
+    "age": 30,
+    "city": "New York"
+}</code></pre><br>
+
+                <p>We want to read this JSON data and use it within our JavaScript code. Here's how we can do it:</p><br>
+
+                <pre><code>// Assume jsonData is a JSON string
+const jsonData = '{"name": "John", "age": 30, "city": "New York"}';
+
+// Convert JSON string to JavaScript object
+const jsonObject = JSON.parse(jsonData);
+
+// Accessing the properties of the JavaScript object
+console.log("Name:", jsonObject.name); // Output: John
+console.log("Age:", jsonObject.age);   // Output: 30
+console.log("City:", jsonObject.city); // Output: New York</code></pre><br>
+
+                <p>In this example, we use the `JSON.parse()` method to convert the JSON string `jsonData` into a
+                    JavaScript object `jsonObject`. Once converted, we can access the properties of the JavaScript
+                    object using dot notation.</p><br>
+
+                <p>This allows us to work with the JSON data as if it were a regular JavaScript object, making it easy
+                    to extract and use the information contained within.</p>
+            </div>
+
+            <span id="fetchingJSON" class="heading-700">Fetching JSON Data</span>
+            <div class="body">
+                <p>Fetching JSON data involves making an HTTP request to a server to retrieve JSON-formatted data. This
+                    data can then be used within your JavaScript code to dynamically update the content of your web
+                    page.</p><br>
+
+                <p>Let's consider an example where we fetch JSON data from an external source using the Fetch API:</p><br>
+
+                <pre><code>// Fetch JSON data from an external URL
+fetch('https://api.example.com/data')
+    .then(response => response.json()) // Parse the response as JSON
+    .then(data => {
+        // Do something with the JSON data
+        console.log(data);
+    })
+    .catch(error => {
+        // Handle any errors that occur during the fetch operation
+        console.error('Error fetching JSON data:', error);
+    });</code></pre><br>
+
+                <p>In this example, we use the Fetch API to make a GET request to the specified URL
+                    ('https://api.example.com/data'). The response from the server is then parsed as JSON using the
+                    `response.json()` method.</p><br>
+
+                <p>Once the JSON data is obtained, it is passed to the second `.then()` method, where we can perform any
+                    desired operations with the data. This could include updating the content of the web page,
+                    displaying it in a specific format, or any other manipulation required.</p><br>
+
+                <p>If an error occurs during the fetch operation, it is caught by the `.catch()` method, allowing us to
+                    handle the error gracefully and provide appropriate feedback to the user.</p>
+            </div>
+            <div>
+                <select id="bookSelect" onchange="displayBookInfo()">
+                    <option value="" selected disabled>Select a book</option>
+                  </select>
+                  
+                  <div class="dialog" id="bookDialog">
+                    <h2 id="bookTitle"></h2>
+                    <p>Author: <span id="bookAuthor"></span></p>
+                    <p>Genre: <span id="bookGenre"></span></p>
+                    <p>Publication Year: <span id="bookYear"></span></p>
+                    <p>Availability: <span id="bookAvailability"></span></p>
+                    <button onclick="closeDialog()">Close</button>
+                  </div>
+                  
+                
+                <script>
+                    function fetchBookData() {
+                      fetch('data.json')
+                      .then(response => response.json())
+                      .then(data => {
+                        const selectElement = document.getElementById('bookSelect');
+                        data.forEach(book => {
+                          const option = document.createElement('option');
+                          option.text = book.title;
+                          option.value = JSON.stringify(book);
+                          selectElement.add(option);
+                        });
+                      })
+                      .catch(error => console.error('Error fetching book data:', error));
+                    }
+                  
+                    // Function to display book information in dialog box
+                    function displayBookInfo() {
+                      const selectedBook = JSON.parse(document.getElementById('bookSelect').value);
+                      const dialog = document.getElementById('bookDialog');
+                      document.getElementById('bookTitle').textContent = selectedBook.title;
+                      document.getElementById('bookAuthor').textContent = 'Author: ' + selectedBook.author;
+                      document.getElementById('bookGenre').textContent = 'Genre: ' + selectedBook.genre;
+                      document.getElementById('bookYear').textContent = 'Publication Year: ' + selectedBook.publication_year;
+                      document.getElementById('bookAvailability').textContent = 'Availability: ' + (selectedBook.availability ? 'Available' : 'Not Available');
+                      dialog.style.display = 'block';
+                    }
+                  
+                    // Function to close dialog box
+                    function closeDialog() {
+                      document.getElementById('bookDialog').style.display = 'none';
+                    }
+                  
+                    // Call fetchBookData() when the page loads
+                    window.onload = fetchBookData;
+                        </script>
+            </div>
+
+            <span id="modifyingJSON" class="heading-700">Modifying JSON Data</span>
+            <div class="body">
+                <p>Modifying JSON data involves updating or changing existing data within a JSON object or array. This
+                    can be useful when you need to dynamically update the content of your web application based on user
+                    interactions or other events.</p><br>
+
+                <p>Here's an example of how you can modify JSON data in JavaScript:</p><br>
+
+                <pre><code>// Original JSON data
+let jsonData = {
+    "name": "John",
+    "age": 30,
+    "city": "New York"
+};
+
+// Modify the value of a property
+jsonData.age = 35;
+
+// Add a new property
+jsonData.email = "john@example.com";
+
+// Remove a property
+delete jsonData.city;
+
+console.log(jsonData); // Output the modified JSON data
+</code></pre><br>
+
+                <p>In this example, we start with an initial JSON object `jsonData`. We then modify the value of the
+                    `age` property, add a new `email` property, and remove the `city` property. These modifications
+                    demonstrate how to update JSON data dynamically within your JavaScript code.</p><br>
+
+                <p>When modifying JSON data, it's important to ensure that the changes are consistent with the structure
+                    and format of the original data to avoid errors or unexpected behavior.</p>
+            </div>
+
+
+            <span id="manipulatingJSON" class="heading-700">Manipulating JSON Data</span>
+            <div class="body">
+                <p>Once you have JSON data in your JavaScript code, you can manipulate it as needed. This includes
+                    accessing nested properties, modifying values, and creating new JSON objects.</p><br>
+                
+                <pre><code>// Assume jsonData is a JSON object
+const jsonData = {
+    "name": "John",
+    "age": 30,
+    "address": {
+        "city": "New York",
+        "country": "USA"
+    }
+};
+
+// Accessing nested properties
+console.log(jsonData.address.city); // Output: New York
+
+// Modifying values
+jsonData.age = 31;
+
+// Creating new JSON object
+const newJsonObject = {
+    "name": "Alice",
+    "age": 25
+};</code></pre>
+            </div>
+
+            <span id="validatingJSON" class="heading-700">Validating JSON Data</span>
+            <div class="body">
+                <p>Before processing JSON data in your application, it's important to validate its structure to ensure
+                    it conforms to your expectations.</p><br>
+
+                <pre><code>// Assume jsonData is a JSON string
+const jsonData = '{"name": "John", "age": 30}';
+
+try {
+    const jsonObject = JSON.parse(jsonData);
+    console.log('JSON data is valid:', jsonObject);
+} catch (error) {
+    console.error('Invalid JSON data:', error);
+}</code></pre>
+        </section>
+    </section>
+
+</body>
